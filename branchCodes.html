@@ -2,6 +2,7 @@
 <html>
 <body>
  
+<p id="numbers"></p>
 <p>Click the button to get every element in the array that is prime</p>
  
 <button onclick="myFunction()">Try it</button>
@@ -9,8 +10,18 @@
 <p id="demo"></p>
  
 <script>
+const numberText=document.getElementById('numbers');
 
-let arr = [22, 11, 14 , 19 , 17 , 12, 16];
+let arr = [];
+
+for(let f = 1;f<=4;f++)                                                           
+{   
+    var z = prompt("Enter numbers for check");   
+    arr.push(z);                              
+
+} 
+
+numberText.innerHTML=arr;
 
 function myFunction() {
   document.getElementById("demo").innerHTML = arr.filter(num => {
